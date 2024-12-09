@@ -85,51 +85,6 @@ function App() {
   };
   return (
     <>
-      {/*    <Header
-        title={"Header"}
-        leftChild={<Button text={"Left"} />}
-        rightChild={<Button text={"Right"} />}
-      />
-      <Button
-        type={"DEFAULT"}
-        text={"시작하기"}
-        onClick={() => {
-          console.log("시작하기 버튼~!");
-        }}
-      />
-      <Button
-        type={"POSITIVE"}
-        text={"저장하기"}
-        onClick={() => {
-          console.log("저장하기⭐ 버튼~!");
-        }}
-      />
-      <Button
-        type={"NEGATIVE"}
-        text={"삭제하기"}
-        onClick={() => {
-          console.log("삭제하기❌ 버튼~!");
-        }}
-      />
- */}
-      <Button
-        text={"New"}
-        onClick={() => {
-          onCreate(new Date().getTime(), 1, "hellllleeo");
-        }}
-      />
-      <Button
-        text={"Update"}
-        onClick={() => {
-          onUpdate(1, new Date().getTime(), 3, "수정된 일기들~!~!!!");
-        }}
-      />
-      <Button
-        text={"Delete"}
-        onClick={() => {
-          onDelete(1);
-        }}
-      />
       <DiaryStateContext.Provider value={data}>
         <DiaryDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
           <Routes>
