@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduSaeeum_OTFMediumA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html,
+body {
+  margin: 0px;
+  width: 100%;
+  background-color: rgb(246, 250, 250);
+}
+#root {
+  background-color: rgb(250, 255, 255);
+  max-width: 600px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(100, 100, 100, 0.1) 0px 0px 29px 0px;
+  padding: 0px 20px;
+}
+body * {
+  font-family: "GangwonEduSaeeum_OTFMediumA";
+  font-size: 30px;
+}
