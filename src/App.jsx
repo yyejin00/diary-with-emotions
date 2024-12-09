@@ -13,14 +13,20 @@ import { getEmotionImage } from "./util/get-emotion-images";
 const mockData = [
   {
     id: 1,
-    createdDate: new Date().getTime(),
-    emotionId: 1,
+    createdDate: new Date("2024-12-09").getTime(),
+    emotionId: 5,
     content: "1번 일기 내용",
   },
   {
     id: 2,
-    createdDate: new Date().getTime(),
+    createdDate: new Date("2024-12-08").getTime(),
     emotionId: 2,
+    content: "2번 일기 내용",
+  },
+  {
+    id: 3,
+    createdDate: new Date("2024-11-08").getTime(),
+    emotionId: 3,
     content: "2번 일기 내용",
   },
 ];
@@ -38,10 +44,10 @@ function reducer(state, action) {
       return state;
   }
 }
-//context
-const DiaryStateContext = createContext();
+//DiaryStateContext를 통해서 data state 값을 공급받는다.
+export const DiaryStateContext = createContext();
 //data state를 변경하는, 일기를 수정하는 함수
-const DiaryDispatchContext = createContext();
+export const DiaryDispatchContext = createContext();
 
 function App() {
   const [data, dispatch] = useReducer(reducer, mockData);
