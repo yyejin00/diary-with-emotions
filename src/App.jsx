@@ -1,12 +1,10 @@
 import { useState, useReducer, useRef, createContext } from "react";
 import Home from "./pages/Home";
-import New from "./pages/new";
+import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Notfound from "./pages/Notfound";
 import { Route, Routes, Link, useNavigate } from "react-router-dom";
 import "./App.css";
-import Button from "./components/Button";
-import Header from "./components/Header";
 import Edit from "./pages/Edit";
 import { getEmotionImage } from "./util/get-emotion-images";
 
