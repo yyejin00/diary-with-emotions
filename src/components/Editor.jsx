@@ -1,8 +1,9 @@
 import "./Editor.css";
 import EmotionItem from "./EmotionItem";
 import Button from "./Button";
-import { useState } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 const emotionList = [
   {
     emotionId: 1,
@@ -42,13 +43,23 @@ const getStringedDate = (targetDate) => {
   }
   return `${year}-${month}-${day}`;
 };
-const Editor = ({ onSubmit }) => {
+const Editor = ({ initData, onSubmit }) => {
   const [input, setInput] = useState({
-    createdDate: new Date(),
+    createdDate: new Date(), //타임스탬프 값
     emotionId: 4,
     content: "",
   });
   const nav = useNavigate();
+
+  useEffect(() => {
+    if (initData) {
+      setInput({
+        ...initData,
+        createdDate: new Date(Number(initData.createdDate)), //문자열에서 타임스탬프 값으로 변환해주기
+      });
+    }
+  }, [initData]);
+
   //input에서 클릭한 값을 적용하는 함수
   const onChangeInput = (e) => {
     /*  console.log(e.target.name); // 어떤 요소에 입력이 들어온것인지 확인
