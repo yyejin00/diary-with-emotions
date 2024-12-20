@@ -13,7 +13,8 @@ const mockData = [
     id: 1,
     createdDate: new Date("2024-12-09").getTime(),
     emotionId: 5,
-    content: "1번 일기 내용",
+    content:
+      "하얀눈이 내려올 때면 온 세상이 물들을 때면, 눈꽃이 피어나 또 빛이나,눈이 부신 너처럼~ 쿵💥쿵💥 가슴이 왜 이렇게 가쁘니 yeah, 꾹꾹 참아도 자꾸 네 생각이 나잖아",
   },
   {
     id: 2,

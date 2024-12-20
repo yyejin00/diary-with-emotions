@@ -4,39 +4,13 @@ import Button from "../components/Button";
 import Editor from "../components/Editor";
 import { useContext, useEffect, useState } from "react";
 import { DiaryDispatchContext, DiaryStateContext } from "../App";
+import useDiary from "../hooks/useDiary";
 
 const Edit = () => {
-  const nav = useNavigate(); // useNavigate hook is used to navigate between pages
+  const nav = useNavigate();
   const params = useParams();
+  const currentDiaryItem = useDiary(params.id);
   const { onDelete } = useContext(DiaryDispatchContext);
-  const data = useContext(DiaryStateContext);
-  const [currentDiaryItem, setCurrentDiaryItem] = useState();
-  useEffect(() => {
-    //getCurrentDiaryItem 함수
-    const currentDiaryItem = data.find(
-      (item) => String(item.id) === String(params.id)
-    );
-    if (!currentDiaryItem) {
-      window.alert("존재하지 않은 일기입니다.");
-      nav("/", { replace: true });
-    }
-    setCurrentDiaryItem(currentDiaryItem);
-  }, [params.id, data]);
-  /* 
-  //params에 해당하는 일기를 data에서 꺼내오도록한다.
-  const getCurrentDiaryItem = () => {
-    const currentDiaryItem = data.find(
-      (item) => String(item.id) === String(params.id)
-    );
-    if (!currentDiaryItem) {
-      window.alert("존재하지 않은 일기입니다.");
-      nav("/", { replace: true });
-    }
-    return currentDiaryItem;
-  };
-
-  const currentDiaryItem = getCurrentDiaryItem();
-  console.log(currentDiaryItem);*/
 
   const onClickDelete = () => {
     if (

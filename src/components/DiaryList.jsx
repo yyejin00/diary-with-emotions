@@ -32,6 +32,7 @@ const DiaryList = ({ data }) => {
           text={"새로운 일기 작성하기"}
           type={"POSITIVE"}
         />
+        <input type="month" name="showOther" />
       </div>
       {/*객체의 여러 프로퍼티를 이름 그대로 받아온다는 뜻인듯 {...item}*/}
       <div className="list_wrapper">

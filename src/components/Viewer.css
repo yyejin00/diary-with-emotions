@@ -1,0 +1,64 @@
+.viewer > section {
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.viewer > section > h4 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.viewer .emotion_img_wrapper {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: rgb(255, 255, 255);
+  font-size: 28px;
+}
+
+.viewer .emotion_img {
+  width: 200px;
+  height: 200px;
+}
+
+.viewer .emotion_img_wrapper_1 {
+  background-color: rgb(242, 103, 72);
+}
+.viewer .emotion_img_wrapper_2 {
+  background-color: rgb(32, 34, 31);
+}
+.viewer .emotion_img_wrapper_3 {
+  background-color: rgb(115, 189, 234);
+}
+.viewer .emotion_img_wrapper_4 {
+  background-color: rgb(254, 213, 87);
+}
+.viewer .emotion_img_wrapper_5 {
+  background-color: rgb(70, 201, 90);
+}
+.viewer .emotion_img_wrapper_6 {
+  background-color: rgb(255, 145, 158);
+}
+
+.viewer .content_wrapper {
+  width: 100%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 5px;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.viewer .content_wrapper > p {
+  padding: 20px;
+  text-align: left;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 2;
+}
