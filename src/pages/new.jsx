@@ -2,11 +2,13 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 import Editor from "../components/Editor";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DiaryDispatchContext } from "../App";
+import usePageTitle from "../hooks/usePageTitle";
 const New = () => {
   const { onCreate } = useContext(DiaryDispatchContext);
   const nav = useNavigate();
+  usePageTitle("새 일기 작성");
 
   const onSubmit = (input) => {
     // 날짜를 타임스탬프 형식으로 저장하게 만든다. .getTime()

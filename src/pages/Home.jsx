@@ -4,6 +4,7 @@ import DiaryList from "../components/DiaryList";
 import { useState, useContext } from "react";
 import { DiaryStateContext } from "../App";
 import { DiaryDispatchContext } from "../App";
+import usePageTitle from "../hooks/usePageTitle";
 
 //해당 달에 있는 일기만 빼오기 위해서는 이번달 시작과 이번달 끝을 알아야한다.
 const getMonthlyData = (pivotDate, data) => {
@@ -33,6 +34,7 @@ const Home = () => {
   //context는
   const data = useContext(DiaryStateContext);
   const [pivotDate, setPivotDate] = useState(new Date());
+  usePageTitle("예진의 오늘 감정");
 
   const monthlyData = getMonthlyData(pivotDate, data);
 
